@@ -86,7 +86,8 @@ The pseudocode can be viewed below.
 ```markdown
 #starting at the JSON portion of code
 #get sensor value (i.e., indications of it being light or dark in the room)
-lightsensor_value = grovepi.analogRead(light_sensor) # what will read light in the room
+# what will read light in the room
+lightsensor_value = grovepi.analogRead(light_sensor) 
 #create a formula that will determine if the room is light or dark
 resistance = (float)(1023 – lightsensor_value) * 10 / lightsensor_value 
 #note, the above was the formula used for the previous assignment, will have to re-calculate

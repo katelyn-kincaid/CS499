@@ -25,41 +25,94 @@ I was able to accomplish this, which showcased my competency in data structures 
 
 ### Code Review
 
-To read my refinement plan for each enhancement, go [here](https://github.com/katelyn-kincaid/CS499/tree/CodeReview). 
+To view my code review, go [here](https://youtu.be/0712i8ezSaw). 
 
-Unfortunately, the file size for the video code review was too large to submit to GitHub. 
+To read my refinement plan for each enhancement, go [here](https://github.com/katelyn-kincaid/CS499/tree/CodeReview).
+
+### Refinement Predictions
+
+If I am successful with my enhancements, then I will be able to demonstrate extreme attention to detail, the ability to adapt and overcome, and resourcefulness. In project Table, I am starting with an existing project that consists of over 600 lines of code. To achieve my enhancements, I must comb through every line and add in new lines of code to place a new object seamlessly on the existing table. Doing all that successfully no doubt proves that I have developed a great attention to detail. In project Weather, I am posing the realistic expectation of adjusting an existing project to better fit the new needs of myself or a client. Doing so may require me to look at a project I spent countless time on with fresh eyes. To pull that off shows that can adapt to new challenges and overcome them through resourcefulness. 
+
+My cause for concern in project Table lies with creating an entirely new shape to add to the project. When I was taking that course, I noticed how the shape of the light copied the shape of the object it was meant to illuminate. I believe I caused that to happen because I was not paying enough attention to the details, so I am optimistic that I can get the results I want this time.  In project Weather, creating JSON files was the biggest issue I had. I believe the bulk of my work will be spent tweaking that bit of code so that the JSON file records the exact kind of data I want. I don’t foresee any issues with implementing Mongo DB into project Weather, but it’s still early. Other than a couple of courses requiring the creation of JSON files, I don’t have much training in that area. This I feel will be my biggest weakness, but it’s one I intend to overcome. 
 
 ### Enhancement One: Software Design and Engineering
 
-Objectives: 
-1. Create multiple objects in OpenGL
-2. Maintain use of textures
-3. Maintain mouse control
+For the category of software design and engineering, I will be adding to the complexity of the final project I submitted for CS-330 Computational Graphics and Visualization. For that project, I was tasked with creating a virtual object based on an existing item of furniture I owned. For ease, it will be referred to as “table,” as that is the object I chose to replicate virtually. To enhance the existing code, my plan will be to add a different object on top of the table. During this project I noticed a distinct difficulty with implementing different shapes within the same file. I’d like to use this project as motivation to overcome this.  
 
-Unfortunately I was unable to meet all objectives I set for myself. Though I was successful in implementing a second object, I was unable to maintain the use of textures and mouse control. 
+I've included the pseudocode below. All comments have been bolded. 
 
-The "refined" file I submitted is still not able to meet these objectives, but it was included to show that the efforts to get there did not cease. 
+```markdown
+**//the mentioned project has 664 lines of code, and changes will need to be made extensively //throughout. Pseudocode to follow will be incredibly vague and can be applied in multiple spots**
+define WINDOW_TITLE “Table” //re-naming to fit this project
+Table position and scale parems
+Table light and color
+Object on table position and scale parems **//new addition**
+Object on table light and color **//new addition**
+Light position and scale
+Table vertex shader source code
+Global variables for the transform matrices
+Table fragment shader source code
+Object on table vertex shader source code **//new addition**
+Global variables for the transform matrices **//new addition**
+Object on table fragment shader source code **//new addition**
+Lamp shader source code
+Lamp fragment shader source code
+Shader program
+	Table vertex shader
+	Table fragment shader
+	Table shader program
+	Delete vertex and fragment shaders once linked
+	Object on table vertex shader **//new addition**
+	Object on table fragment shader **//new addition**
+	Object on table shader program **//new addition**
+	Delete object on table vertex and fragment shaders once linked **//new addition**
+	Lamp vertex shader
+	Lamp fragment shader
+	Lamp shader program
+	Delete lamp shaders once linked
+Draw the vertices for the table
+Draw the vertices for the object **//new addition**
+```
+Now that the enhancements have been made, I can go back and reflect on this. I really did try to keep with the pseudocode above, but it ultimately proved to be unsuccessful. You can see how it turned out by looking at the RefinedTable file listed [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementOne). 
 
-You can find the full list of files pertaining to Enhancement One [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementOne).
+However, I was partially successful with the creation of a second, unique object. I was able to create a cube on top of my table, and both had independent movement of one another. I was not able to keep the texture, lighting, or mouse movement elements. I kept trying to further refine the project, but I could not get past this hurdle. 
 
 ### Enhancement Two: Algorithms and Data Structure
 
-Objectives:
-1. Include more types of data to be sent to a JSON file
-2. Remove the criteria that dictated when data would be recorded
+For the category of algorithms and data structures, I will be improving the efficiency of the final project I submitted in CS-350 Emerging Systems Architectures and Technologies. For that project I was tasked with creating a temperature and humidity data collecting device that would only record data during day-light hours. I will re-program that same weather data-collecting device to record not only the temperature and humidity levels, but to also record if it’s light or dark and the time of day. I will then enhance the existing code that sends the collected data to a json file to include everything I listed. 
 
-I was able to meet both objectives I set for myself with this Enhancement. 
+I've included my pseudocode below, but I had to change the comment indicators to slashes instead of number signs to ensure it didn't become a header. 
 
-You can find the full list of files pertaining to Enhancement Two [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementTwo).
+```markdown
+**// starting at the JSON portion of code**
+**// get sensor value (i.e., indications of it being light or dark in the room)**
+lightsensor_value = grovepi.analogRead(light_sensor) # what will read light in the room
+**// create a formula that will determine if the room is light or dark**
+resistance = (float)(1023 – lightsensor_value) * 10 / lightsensor_value 
+**//note, the above was the formula used for the previous assignment, will have to re-calculate**
+**// initiate if/else statements**
+If resistance is less than the threshold
+Data will be sent to a json file **//record temp, humidity, time of day, and light levels**
+Set frequency to 10 minutes 
+Else
+Print no data collected at TIME
+
+```
+With this enhancement done as well, I can confidently say that I was able to accomplish everything I set out to for this projet. I wanted to ensure temperature, humidity, time of day, and light levels would be recorded and sent to a JSON file. The only thing I strayed on would be changing the frequency of data collection to 10 minutes. You can find the pre and post enhancement refinement [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementTwo).  
 
 ### Enhancement Three: Databases
 
-Objectives: 
-1. Integrate MongoDB
+In the databases category, I will attempt to create a MongoDB interface with the same weather project used in the previous category from CS-350 Emerging Systems Architectures and Technologies. While I’m in the terminal of my raspberry Pi setup, I will initiate Mongo DB. In its current state, the weather project saves certain weather data to a json file to be viewed on an HTML5 canvas. My intent will be to view the same json files through Mongo DB. Doing so will make it quicker and easier for me to access the weather data. Adding this feature to my existing code was made possible by taking CS-340 Advanced Programming Concepts. 
 
-I was able to meet the objective I set for myself with this Enhancement. 
+```markdown
+#While in the terminal
+../startMongod.sh
+View available databases
+View files
+Open json file that holds weather data
 
-You can find the full list of files pertaining to Enhancement Three [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementThree).
+```
+With this enhancement done, I can say that I was able to accomplish exactly what I set out to do. However, it was not done as easily as the pseduocode would suggest. First I had to download MongoDB to my Raspberry Pi set up. Next I had to import the JSON file. After that, I used different commands than listed in the pseudocode. Instead of using ../startMongod.sh, I just had to use mongo. Then I showed the databases and files, and eventually the specific file I was looking for. There isn't exactly code, so to speak, for this enhancement. For others to view, I included the pre and post enhancement JSON files as well as the narrative I drafted upon completion. You can find the full list of files pertaining to Enhancement Three [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementThree).
 
 ### Markdown
 

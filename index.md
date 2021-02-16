@@ -73,9 +73,21 @@ Shader program
 Draw the vertices for the table
 Draw the vertices for the object //new addition
 ```
-Now that the enhancements have been made, I can go back and reflect on this. I really did try to keep with the pseudocode above, but it ultimately proved to be unsuccessful. You can see how it turned out by looking at the RefinedTable file listed [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementOne). 
+**Enhancement One Narrative**
 
-However, I was partially successful with the creation of a second, unique object. I was able to create a cube on top of my table, and both had independent movement of one another. I was not able to keep the texture, lighting, or mouse movement elements. I kept trying to further refine the project, but I could not get past this hurdle. 
+The artifact I chose to work on was the final project I submitted for CS-330: Computational Graphics and Visualization. The objective of that assignment was to replicate an existing object using OpenGL. The object I chose to replicate was a table, though I also added the ability to rotate the table with my mouse and a texture that better matched the color scheme of the table. This was initially completed on August 12TH, 2020. 
+
+I chose to include this project for several reasons. It was the only class I’ve taken in my entire time at SNHU involving OpenGL, and I wanted to try to learn more of it. During my time working on the final, I struggled when I tried to do something as simple as change the shape of the light source. Instead of showing as something unique, it simply copied the shape of my table. I wanted to better understand how the various features (texture, light, movement) can interact with each other. During CS-330, I only got a quick introduction to it all. Though OpenGL can be frustrating, learning it made CS-330 one of my favorite classes in my entire academic career. My preference for this subject influenced my decision to choose this project. 
+
+This artifact demonstrated a highly polished product that was able to demonstrate my ability to manually move an object, produce light, and adhere a texture. It showcased my attention to detail when I not only was able to replicate the pattern on my table, but when I had to meticulously map out the exact positions of every single flat service of that table. That part alone took several hours to perfect. Still, I wasn’t fully satisfied with the outcome. Adding a second, unique object had bested me before—so I chose to do just that for my enhancement. 
+
+Unfortunately, I was unsuccessful in achieving my goal for this project. I wanted to essentially keep every aspect I already had and then simply add another object. That did not work out. I underestimated just how difficult it would be to get every aspect to work together. To get my second, unique object, I had to sacrifice everything else. Now I have a cube hovering over a table as they both rotate. Since I had to take away features, I don’t consider the project enhanced—it simply had a trade-off. I’m not finished, though. My plan to continue will be to slowly add a feature and see how the project ends up. 
+
+Overall, I learned a lot. The highlight being able to create multiple unique 3D objects. I also learned that trying to jam in another object into the code is a lot hard than originally thought. I did not consider how adding in another object would impact the other features. I assumed that there may be a few hiccups here or there in areas of code I overlooked and forgot to update, but I never imagined I’d essentially have to start over. I tried for countless hours to re-work my existing code in a way that would allow me to have everything I set out to achieve. Unfortunately, what I had just wasn’t working for what I wanted to accomplish, so I made the decision to scrap most of what I had to move forward.
+
+**Final Product**
+
+Even after going back to this project, I was still unable to make all the desired changes. I was successful in creating two separate and unique objects that moved independently of one another, but that's where the success ended. I wasn't able to maintain the texture, lighting, or mouse movements. My final attempt at this is labeled RefinedTable and can be found [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementOne) along with every other applicable file for this enhancement. 
 
 ### Enhancement Two: Algorithms and Data Structure
 
@@ -99,6 +111,16 @@ Else
 Print no data collected at TIME
 ```
 
+**Enhancement Two Narrative**
+
+The artifact I chose to work on was the final project I submitted for CS-350: Emerging Systems Architectures and Technologies in October 2020. The objective of this project, titled ‘Weather,’ was to use RaspberryPi and GrovePi to create a device that would record light levels, temperature, and humidity levels. Using those inputs, you were then expected to send all applicable data to a JSON file using specific conditions. In the case of this project, one condition was to only record temperature data if it were during the day. 
+
+I chose to focus on this project for the Algorithms and Data Structure enhancement because such a vital component of it is the inclusion of JSON files. Before CS-350 I had no formal experience with JSON files and I wanted to challenge myself to become more familiar with them. To improve upon the original, I wanted to first eliminate the criteria that data would only be stored during set hours. Next I wanted to increase the amount of data that would be added to the file. I was already collecting the temperature and humidity levels, but I also wanted to ensure the time of day and some kind of indication of it being light or dark out were added. Though a simple start, it’s enough to at least tell the person looking at the data if it’s overcast out. 
+
+I was able to accomplish everything I set out to in Module One. At this time, I have no plans for future updates for this enhancement. I learned a lot about JSON files with this project. Specifically, I learned how to include the current time in the JSON file and how to send a conditional text statement to a JSON file. Admittedly, I was hung up on how to include the light/dark indication in the JSON file. I spent a lot of time trying to add it as a condition in the if/else statement. Then I realized I was overthinking the situation and just created a variable. 
+
+**Final Product**
+
 With this enhancement done as well, I can confidently say that I was able to accomplish everything I set out to for this projet. I wanted to ensure temperature, humidity, time of day, and light levels would be recorded and sent to a JSON file. The only thing I strayed on would be changing the frequency of data collection to 10 minutes. You can find the pre and post enhancement refinement [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementTwo).  
 
 ### Enhancement Three: Databases
@@ -116,6 +138,31 @@ Open json file that holds weather data
 ```
 
 
+
+**Enhancement Three Narrative**
+
+The artifact I chose to work on was the final project I submitted for CS-350: Emerging Systems Architectures and Technologies in October 2020. The objective of this project, titled ‘Weather,’ was to use RaspberryPi and GrovePi to create a device that would record light levels, temperature, and humidity levels. Using those inputs, you were then expected to send all applicable data to a JSON file using specific conditions. In the case of this project, one condition was to only record temperature data if it were during the day. 
+
+This project was selected for the Database enhancement because I wanted to see if I could integrate MongoDB to a project outside of Codio—the website used when learning about MongoDB. I also wanted to introduce a different way to view the data collected by the weather device. Unlike the previous week, the entirety of this week’s enhancement was spent in the “interactive shell” of raspberry pi, instead of the “LXDE Desktop” that I would typically use when developing this project. 
+
+![Image](https://github.com/katelyn-kincaid/CS499/blob/EnhancementThree/import.png)
+
+After downloading MongoDB, I had to import the json file I created the previous week. With the file imported, I then needed to verify that the information could be displayed using MongoDB. 
+
+![Image](https://github.com/katelyn-kincaid/CS499/blob/EnhancementThree/import.png)
+
+You can see my full sequence of commands above. There was a lot to the JSON file, so to see the full contents you would need to type “it” several times. When I first sat down and decided what specific enhancements I wanted to make to my previous final projects, I had decided that I just wanted to see if I could integrate MongoDB into a project I completed through RaspberryPi. That has proven to be a success. 
+
+By integrating MongoDB into my project, I’ve given myself more flexibility with querying my files. Initially, I would have to use an HTML5 static canvas to view this data, and it would be done so out of the RaspberryPi desktop. I could have also simply opened up the JSON file, but the method used above condenses it down to something much easier to read at a glance (i.e. all of the unnecessary spaces have been omitted). This is simply one more method of viewing the data collected. 
+	
+Since the only objective in this enhancement was to successfully integrate MongoDB, I think it’s safe to say that the objective has been met. I don’t have any further plans for this enhancement at this time—I think what has been accomplished already is significant and worthwhile. 
+	
+While I was attempting to accomplish this enhancement, I learned how to integrate MongoDB into an existing project. Before this enhancement, the only time I ever used MongoDB was for a course through Codio. I had never been forced to install it and then try to integrate it.  I learned that it is truly an easy process and knowing this I think I will be more inclined to integrate MongoDB into future projects. 
+	
+Aside from that, I learned that I was quite out of practice with MongoDB commands. I had to look back at previous assignments that showed how I got certain results. After spending some time familiarizing myself with the commands, I was able to deliver the screenshots provided above depicting the success of this enhancement.  
+
+
+**Final Product**
 
 With this enhancement done, I can say that I was able to accomplish exactly what I set out to do. However, it was not done as easily as the pseduocode would suggest. First I had to download MongoDB to my Raspberry Pi set up. Next I had to import the JSON file. After that, I used different commands than listed in the pseudocode. Instead of using ../startMongod.sh, I just had to use mongo. Then I showed the databases and files, and eventually the specific file I was looking for. There isn't exactly code, so to speak, for this enhancement. For others to view, I included the pre and post enhancement JSON files as well as the narrative I drafted upon completion. You can find the full list of files pertaining to Enhancement Three [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementThree).
 

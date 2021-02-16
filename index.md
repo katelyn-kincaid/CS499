@@ -115,6 +115,8 @@ View files
 Open json file that holds weather data
 ```
 
+
+
 With this enhancement done, I can say that I was able to accomplish exactly what I set out to do. However, it was not done as easily as the pseduocode would suggest. First I had to download MongoDB to my Raspberry Pi set up. Next I had to import the JSON file. After that, I used different commands than listed in the pseudocode. Instead of using ../startMongod.sh, I just had to use mongo. Then I showed the databases and files, and eventually the specific file I was looking for. There isn't exactly code, so to speak, for this enhancement. For others to view, I included the pre and post enhancement JSON files as well as the narrative I drafted upon completion. You can find the full list of files pertaining to Enhancement Three [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementThree).
 
 ### Markdown

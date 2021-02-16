@@ -146,10 +146,12 @@ The artifact I chose to work on was the final project I submitted for CS-350: Em
 This project was selected for the Database enhancement because I wanted to see if I could integrate MongoDB to a project outside of Codio—the website used when learning about MongoDB. I also wanted to introduce a different way to view the data collected by the weather device. Unlike the previous week, the entirety of this week’s enhancement was spent in the “interactive shell” of raspberry pi, instead of the “LXDE Desktop” that I would typically use when developing this project. 
 
 ![Image](https://github.com/katelyn-kincaid/CS499/blob/EnhancementThree/import.png)
+_(You may need to open image in a new tab to view)_
 
 After downloading MongoDB, I had to import the json file I created the previous week. With the file imported, I then needed to verify that the information could be displayed using MongoDB. 
 
 ![Image](https://github.com/katelyn-kincaid/CS499/blob/EnhancementThree/import.png)
+_(You may need to open image in a new tab to view)_
 
 You can see my full sequence of commands above. There was a lot to the JSON file, so to see the full contents you would need to type “it” several times. When I first sat down and decided what specific enhancements I wanted to make to my previous final projects, I had decided that I just wanted to see if I could integrate MongoDB into a project I completed through RaspberryPi. That has proven to be a success. 
 
@@ -165,30 +167,6 @@ Aside from that, I learned that I was quite out of practice with MongoDB command
 **Final Product**
 
 With this enhancement done, I can say that I was able to accomplish exactly what I set out to do. However, it was not done as easily as the pseduocode would suggest. First I had to download MongoDB to my Raspberry Pi set up. Next I had to import the JSON file. After that, I used different commands than listed in the pseudocode. Instead of using ../startMongod.sh, I just had to use mongo. Then I showed the databases and files, and eventually the specific file I was looking for. There isn't exactly code, so to speak, for this enhancement. For others to view, I included the pre and post enhancement JSON files as well as the narrative I drafted upon completion. You can find the full list of files pertaining to Enhancement Three [here](https://github.com/katelyn-kincaid/CS499/tree/EnhancementThree).
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
